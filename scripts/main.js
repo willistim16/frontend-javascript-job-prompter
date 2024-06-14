@@ -49,7 +49,7 @@ const departments = {
     },
     "customer-service": {
         description: "Klantenservice richt zich op het bieden van uitzonderlijke ondersteuning en assistentie aan klanten vóór, tijdens en na hun interacties met een bedrijf. Het draait om het opbouwen van positieve relaties met klanten en ervoor zorgen dat ze tevreden zijn door hun vragen, zorgen en behoeften aan te pakken. Klantenserviceprofessionals fungeren als de vertegenwoordigers van een bedrijf, als het eerste aanspreekpunt voor klanten. Ze maken gebruik van verschillende communicatiekanalen, zoals telefoongesprekken, e-mails, live chats of persoonlijke interacties, om klanten op een vriendelijke, efficiënte en empathische manier te helpen.",
-        numberOfEmployees: 32,
+        numberOfEmployees: 33,
         jobs: [
             {
                 title: "Klantenservicemedewerker",
@@ -72,3 +72,9 @@ const departments = {
 }
 
 console.log(departments);
+console.log("De afdeling marketing heeft " + departments.marketing.numberOfEmployees + " medewerkers")
+console.log ("De afdeling sales heeft " + departments.sales.numberOfEmployees + " medewerkers")
+console.log ("De afdeling customer-service heeft " + departments["customer-service"].numberOfEmployees + " medewerkers")
+/*
+console.log ("Marketing is een leuke afdeling om te werken. Marketing omvat verschillende strategieën en activiteiten gericht op het promoten van producten, diensten of merken bij het doelpubliek. Het omvat het begrijpen van de behoeften en voorkeuren van consumenten, het uitvoeren van marktonderzoek, het ontwikkelen van marketingplannen en het implementeren van tactieken om potentiële klanten te bereiken en te betrekken. Marketingprofessionals analyseren markttrends, identificeren doelmarkten en creëren overtuigende boodschappen en communicatiestrategieën om merkbekendheid op te bouwen, klantenwerving te stimuleren en klantloyaliteit te bevorderen")
+console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager. Sales omvat activiteiten en strategieën die gericht zijn op het genereren van omzet door het verkopen van producten, diensten of oplossingen aan klanten. Het draait om het opbouwen van relaties, het identificeren van klantbehoeften en het overtuigend communiceren van de waarde en voordelen van een product of dienst aan potentiële kopers. Verkoopprofessionals spelen een cruciale rol bij het stimuleren van bedrijfsgroei en het behalen van omzetdoelstellingen. Ze zoeken naar en kwalificeren leads, hebben directe interacties met klanten, onderhandelen over contracten en sluiten deals.")*/
