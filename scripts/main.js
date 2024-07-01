@@ -71,51 +71,58 @@ const departments = {
     }
 }
 
-console.log(departments);
-console.log("De afdeling sales heeft " + [departments.sales.numberOfEmployees] + " medewerkers");
-console.log("Marketing is een leuke afdeling om te werken. " + [departments.marketing.description]);
-console.log("De afdeling Customer Service heeft " + [departments["customer-service"].numberOfEmployees] + " medewerkers");
-console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager. " + [departments.sales.description]);
+// console.log(departments);
+// console.log("De afdeling sales heeft " + [departments.sales.numberOfEmployees] + " medewerkers");
+// console.log("Marketing is een leuke afdeling om te werken. " + [departments.marketing.description]);
+// console.log("De afdeling Customer Service heeft " + [departments["customer-service"].numberOfEmployees] + " medewerkers");
+// console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager. " + [departments.sales.description]);
 
-let userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]');
+const userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]');
 console.log(userInput);
+
 if (userInput === "marketing") {
-    console.log(departments.marketing.description)
+    console.log("Je koos Marketing. " + departments.marketing.description)
 }
-if (userInput === "sales") {
-    console.log(departments.sales.description)
+else if (userInput === "sales") {
+    console.log("Je koos Sales. " + departments.sales.description)
 }
-if (userInput === "customer-service") {
-    console.log(departments["customer-service"].description)
+else if (userInput === "customer-service") {
+    console.log("Je koos Customer-service. " + departments["customer-service"].description)
 }
-if (userInput === false) {
+else {
     console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
 }
-//
-// let userInput = prompt("Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 4 in.\n" +
-//     "0: [marketingmanager],\n" +
-//     "1: [Digital Marketing Specialist],\n" +
-//     "2: [Contentmarketeer],\n" +
-//     "3: [Branding Agent],\n" +
-//     "4: [Marktonderzoeksanalist],\n")
-//
-// if (userInput === "0") {
-//     console.log("Je koos marketingmanager. Een uitdagende rol! De marketingmanager is verantwoordelijk voor het ontwikkelen en implementeren van marketingstrategieën om de producten of diensten van een bedrijf te promoten. Ze houden toezicht op marktonderzoek, reclamecampagnes en initiatieven voor klantenwerving. Ze analyseren markttrends, identificeren doelgroepen en werken samen met interdisciplinaire teams om marketingdoelen te bereiken en bedrijfsgroei te stimuleren.")
-// }
-// if (userInput === "1") {
-//     console.log("Je koos Digital Marketing Specialist. Een uitdagende rol! Een Digita Marketing Specialist richt zich op online marketingactiviteiten om dezichtbaarheid van het merk, websiteverkeer en klantbetrokkenheid te vergroten. Z maken gebruik van verschillende digitale kanalen zoals sociale media,e-mailmarketing, zoekmachineoptimalisatie (SEO) en betaalde advertenties (PPC).Ze monitoren de prestaties van campagnes, analyseren gegevens en optimaliserenstrategieën om online aanwezigheid te maximaliseren en leads of conversies tegenereren.")
-//     }
-// if (userInput === "2") {
-//     console.log("Je koos Contentmarketeer. Een uitdagende rol! Een contentmarketeer is verantwoordelijk voor het ontwikkelen en uitvoeren van contentstrategieën die aansluiten bij het merk en de marketingdoelstellingen van een bedrijf. Ze houden toezicht op contentcreatie, waaronder blogs, artikelen, video's, infographics en berichten op sociale media. Ze werken samen met schrijvers, ontwerpers en andere belanghebbenden om hoogwaardige content te produceren die de doelgroep aanspreekt en merkbekendheid, thought leadership en klantenwerving stimuleert.")
-// }
-// if (userInput === "3") {
-//     console.log("Je koos Branding Agent. Een uitdagende rol! Een Branding Agent is verantwoordelijk voor het vaststellen en handhaven van een consistente merkafbeelding en identiteit op verschillende marketingkanalen. Ze ontwikkelen richtlijnen voor het merk, positionering en berichtenstrategieën. Ze houden toezicht op productlanceringen, reclamecampagnes en inspanningen op het gebied van merkcommunicatie. Ze volgen de prestaties van het merk, voeren marktonderzoek uit en doen aanbevelingen om de merkperceptie en merkwaarde te verbeteren.")
-// }
-// if (userInput === "4") {
-//     console.log("Je koos Marktonderzoeksanalist. Een uitdagende rol! Een marktonderzoeksanalist voert diepgaand onderzoek uit om gegevens te verzamelen en te analyseren over markttrends, consumentenvoorkeuren en concurrentieactiviteiten. Ze ontwerpen en voeren enquêtes, focusgroepen en interviews uit om relevante informatie te verzamelen. Ze interpreteren gegevens, genereren inzichten en bereiden rapporten voor met bruikbare aanbevelingen. Ze helpen bedrijven geïnformeerde beslissingen te nemen over productontwikkeling, doelmarkten, prijsstrategieën en marketingcampagnes.")
-// }
-// if (userInput !== true) {
-//     console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
-// }
 
+
+const userInput2 = prompt("Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 4 in.\n" +
+    "0: [marketingmanager],\n" +
+    "1: [Digital Marketing Specialist],\n" +
+    "2: [Contentmarketeer],\n" +
+    "3: [Branding Agent],\n" +
+    "4: [Marktonderzoeksanalist],\n")
+
+if (userInput2 === "0") {
+    console.log("Je koos marketingmanager. Een uitdagende rol! " + departments.marketing.jobs[0].description)
+}
+else if (userInput2 === "1") {
+    console.log("Je koos Digital Marketing Specialist. Een uitdagende rol! " + departments.marketing.jobs[1].description)
+    }
+else if (userInput2 === "2") {
+    console.log("Je koos Contentmarketeer. Een uitdagende rol!" + departments.marketing.jobs[2].description)
+}
+else if (userInput2 === "3") {
+    console.log("Je koos Branding Agent. Een uitdagende rol! " + departments.marketing.jobs[3].description)
+}
+else if (userInput2 === "4") {
+    console.log("Je koos Marktonderzoeksanalist. Een uitdagende rol! " + departments.marketing.jobs[4].description)
+}
+else {
+    console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
+}
+
+// const userinput3 = prompt("Je koos Sales. Over welke functie wil je meer weten? Voer een getal tussen 0 en 4 in.\n" +
+// "0: [Sales Representative],\n" +
+// "1: [Verkoopmanager],\n" +
+// "2: [Accountmanager],\n" +
+// "3: [Business Development Manager],\n")
 
