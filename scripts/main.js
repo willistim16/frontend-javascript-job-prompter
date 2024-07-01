@@ -84,7 +84,6 @@ if (userInput === "marketing") {
 }
 if (userInput === "sales") {
     console.log(departments.sales.description)
-
 }
 if (userInput === "customer-service") {
     console.log(departments["customer-service"].description)
